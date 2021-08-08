@@ -1,0 +1,25 @@
+{
+  "name": "@danburzo/dotfiles",
+  "version": "1.0.0",
+  "description": "Dotfiles to grab in Node.js / browser projects.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danburzo/node-dotfiles.git"
+  },
+  "files": [
+    "cli.js",
+    "dotfiles"
+  ],
+  "bin": "./cli.js",
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danburzo/node-dotfiles/issues"
+  },
+  "homepage": "https://github.com/danburzo/node-dotfiles#readme",
+  "dependencies": {
+    "opsh": "^1.0.0"
+  }
+}
