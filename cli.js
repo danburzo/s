@@ -8,7 +8,7 @@ run();
 
 async function run() {
 
-	const { options, operands } = opsh(process.argv.slice(2), ['h', 'help', 'l', 'list']);
+	const { options, operands } = opsh(process.argv.slice(2), ['h', 'help', 'l', 'list', 'f', 'force']);
 
 	if (options.h || options.help) {
 		outputHelp();
@@ -30,7 +30,7 @@ async function run() {
 	}
 
 	operands.forEach(op => {
-		fs.copyFile(path.join(__dirname, 'dotfiles', op), path.join(process.cwd(), op), constants.COPYFILE_EXCL);
+		fs.copyFile(path.join(__dirname, 'dotfiles', op), path.join(process.cwd(), op), options.f || options.force ? 0 : constants.COPYFILE_EXCL);
 	});
 }
 
@@ -52,8 +52,18 @@ Usage:
 
 Available options:
 
-	-l, --list    List all available files
+	-l, --list      List all available files.
+	-f, --force     Overwrite file if it already exists
+	                in the current working directory.
 
+General options:
+
+	-h, --help      Print help information.
+	-v, --version   Show current package version.
+
+Example:
+
+	npx @danburzo/dotfiles .prettierrc.json
 
 `);
 }
