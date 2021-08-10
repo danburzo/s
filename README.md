@@ -1,16 +1,16 @@
 # node-dotfiles
 
-Dotfiles to grab in Node.js / browser projects.
+Snippets to grab in Node.js / browser projects.
 
 Usage:
 
 ```bash
 # Print help information
-npx danburzo/dotfiles --help
+npx danburzo/s --help
 
 # List available files
-npx danburzo/dotfiles --list
+npx danburzo/s --list
 
 # Copy some files
-npx danburzo/dotfiles .prettierrc.json
+npx danburzo/s .prettierrc.json
 ```
